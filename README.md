@@ -8,7 +8,7 @@ See the corresponding blog post: [Unlocking 25 Gigabit/s on 10 GbE Direct Attach
 
 ## How to run this
 
-This works best with OpenWrt 25.12, but as long as you have [`i2csfp`](https://github.com/ericwoud/i2csfp), you should be good. 
+This works best with OpenWrt 25.12 (tested on BananaPi BPI-R3), but as long as you have [`i2csfp`](https://github.com/ericwoud/i2csfp), you should be good. 
 
 ```sh
 # Install dependencies (only needed once)
@@ -16,6 +16,7 @@ This works best with OpenWrt 25.12, but as long as you have [`i2csfp`](https://g
 
 # Dumps the current EEPROM data and config, then sets the cable to 25G speeds
 # Important: Edit file to set the correct i2c device!!!
+# The defaults are configured for the "SFP2" slot in a BananaPi BPI-R3
 ./info-and-update.sh
 
 # Alternatively, just update directly (change the device as required)
